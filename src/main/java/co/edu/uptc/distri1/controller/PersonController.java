@@ -14,8 +14,8 @@ public class PersonController {
     @GetMapping("/all")
     public Person getPersonRandom() {
         Person person = new Person();
-        person.setName("Oscar");
-        person.setLastname("Sanabria");
+        person.setName("Juan Carlos");
+        person.setLastname("Avendaño");
         return person;
     }
 }
