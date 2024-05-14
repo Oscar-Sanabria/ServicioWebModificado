@@ -5,17 +5,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.edu.uptc.distri1.model.Person;
+//import co.edu.uptc.distri1.model.Person;
 
 @RestController
-@RequestMapping("/persona")
+@RequestMapping("/calcular")
 
 public class PersonController {
     @GetMapping("/all")
-    public Person getPersonRandom() {
-        Person person = new Person();
-        person.setName("Juan Carlos");
-        person.setLastname("Avendaño");
-        return person;
+    public double ejemplo(
+        @RequestParam("p1") String p1,
+        @RequestParam("p2") String p2) {
+        return Double.parseDouble(p1)/Double.parseDouble(p2);
     }
 }
